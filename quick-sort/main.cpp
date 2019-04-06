@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < 10; ++i) {
         arr[i] = rand() % 100;
     }
-	print("input", arr, 10);
+    print("input", arr, 10);
     quick_sort(arr, 0, 9);
-	print("output", arr, 10);
+    print("output", arr, 10);
 }
