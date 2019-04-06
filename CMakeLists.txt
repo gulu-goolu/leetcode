@@ -3,3 +3,4 @@ project(leetcode)
 
 add_executable(maximum-binary-tree maximum-binary-tree/main.cpp)
 add_subdirectory(k-closest-points-to-origin)
+add_subdirectory(quick-sort)

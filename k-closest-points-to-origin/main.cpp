@@ -6,11 +6,10 @@ using namespace std;
 class Solution {
 public:
     using Point = vector<int>;
-    vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {        
+    vector<vector<int>> kClosest(vector<vector<int>> &points, int K) {
         vector<Point> heap;
         init_heap(heap, points, K);
-        for(int i = K;i<points.size();++i)
-        {
+        for (int i = K; i < (int)points.size(); ++i) {
             update_heap(heap, points[i]);
         }
         return heap;
@@ -33,16 +32,8 @@ public:
         *heap.rbegin() = point;
         push_heap(heap.begin(), heap.end(), compare);
     }
-
 };
 
 int main(int argc, char *argv[]) {
-	Solution solution;
-    auto points = solution.kClosest(
-        {
-            { 1, 3 },
-            { -2, 2 },
-            { 1, 1 },
-        },
-        2);
+    Solution solution;
 }
