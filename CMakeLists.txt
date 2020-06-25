@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(leetcode)
 
-add_subdirectory(quick-sort)
 add_subdirectory(reverse-words-in-a-string)
 add_subdirectory(3sum)
 add_subdirectory(reorder-list)
