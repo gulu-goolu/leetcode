@@ -1,0 +1,5 @@
+file(GLOB files RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
+foreach (file ${files})
+    get_filename_component(id ${file} NAME_WLE)
+    add_executable("interview-${id}" ${file})
+endforeach ()
