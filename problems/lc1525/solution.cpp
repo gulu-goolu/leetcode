@@ -1,9 +1,9 @@
 #include <algorithm>
+#include <cstdio>
+#include <sstream>
 #include <string>
 #include <unordered_set>
 #include <vector>
-#include <cstdio>
-#include <sstream>
 
 using namespace std;
 
@@ -17,7 +17,7 @@ void print(const char* tag, const vector<int>& v) {
 }
 
 class Solution {
-public:
+ public:
   int numSplits(string s) {
     vector<int> v1, v2;
     unordered_set<char> h1, h2;
@@ -33,7 +33,7 @@ public:
     print("v2", v2);
 
     int res = 0;
-    for (int i  = 1; i < s.length(); ++i) {
+    for (int i = 1; i < s.length(); ++i) {
       if (v1[i - 1] == v2[i]) res++;
     }
 
