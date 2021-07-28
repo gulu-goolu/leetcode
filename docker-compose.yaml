@@ -7,3 +7,4 @@ services:
     volumes:
       - .:/leetcode
     command: /usr/bin/tail -f /dev/null
+    working_dir: /leetcode

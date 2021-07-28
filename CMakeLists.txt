@@ -5,7 +5,12 @@ set(CMAKE_EXECUTABLE_OUTPUT_PATH bin)
 
 set (CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/module)
 
-find_package(googletest)
+find_package(GoogleTest)
+
+function (lc_add_executable target)
+    add_executable (${target} ${ARGN})
+    target_link_libraries (${target} gtest_main)
+endfunction ()
 
 add_subdirectory(problems)
 
