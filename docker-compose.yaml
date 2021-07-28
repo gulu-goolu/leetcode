@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  devel:
+    build:
+      dockerfile: dockerfiles/Dockerfile.devel
+      context: .
+    volumes:
+      - .:/leetcode
+    command: /usr/bin/tail -f /dev/null

@@ -3,6 +3,10 @@ project(leetcode)
 
 set(CMAKE_EXECUTABLE_OUTPUT_PATH bin)
 
+set (CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/module)
+
+find_package(googletest)
+
 add_subdirectory(problems)
 
 add_subdirectory(reverse-words-in-a-string)
